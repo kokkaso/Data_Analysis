@@ -1,0 +1,91 @@
+---
+title: "Hello R and GitHub"
+author: "sk"
+date: "30 10 2021"
+output:
+  html_document: default
+  pdf_document: default
+---
+
+
+## 1. Assigning values 
+
+```{r}
+a<-5
+b<-2
+```
+
+## 2.  Computing
+
+```{r}
+r1<-a+b
+r2<-a-b
+r3<-a*b
+r4<-a/b
+```
+
+## 3. Creation of vector `v1`
+
+```{r}
+v1<-c(r1,r2,r3,r4)
+```
+
+
+## 4. Adding a fifth entry to `v1`
+
+```{r}
+#v1<-c(v1[1:4],a**b,v1[5:length(v1)])
+v1 <- c (v1 , (a**b))
+```
+
+
+## 5. Showing the content of `v1`
+
+```{r}
+print(v1)
+```
+
+
+## 6. Creation of a second Vector `v2`
+
+```{r}
+v2<-c("sum","difference","product","ratio","power")
+```
+
+## 7. Showing the content of `v2`
+
+```{r}
+print(v2)
+```
+
+## 8. Combining the two vectors `v1` and `v2`
+
+into a dataframe named `df`
+
+```{r}
+df <-data.frame(v1,v2)
+
+print(df)
+```
+
+## 9. Naming the colums
+
+```{r}
+colnames(df) <- c("Results", "Operation")
+```
+
+
+## 10. Showing the content of `df`
+
+```{r}
+df
+```
+
+
+## 11. Showing only **one** specific cell
+only the cell in the second row and first column
+
+```{r}
+df[2,1]
+```
+
